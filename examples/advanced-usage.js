@@ -1,7 +1,7 @@
 const { EnvGuardian } = require('../index');
 
 // Advanced usage with error handling
-console.log('🚀 Advanced Configuration Example\n');
+console.log('Advanced Configuration Example\n');
 
 const guardian = new EnvGuardian({ 
   strict: false,  // Don't throw on validation errors

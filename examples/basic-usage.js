@@ -1,7 +1,7 @@
 const envGuardian = require('../index');
 
 // Basic usage example
-console.log('🔧 Basic Configuration Example\n');
+console.log('Basic Configuration Example\n');
 
 const config = envGuardian({
   // Server settings
