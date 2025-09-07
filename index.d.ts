@@ -3,23 +3,18 @@ export interface ValidationConfig {
   required?: boolean;
   default?: any;
   
-  // String validation options
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
   
-  // Number validation options
   min?: number;
   max?: number;
   integer?: boolean;
   
-  // Array validation options
   separator?: string;
   
-  // URL validation options
   protocols?: string[];
   
-  // Enum validation options
   values?: any[];
 }
 

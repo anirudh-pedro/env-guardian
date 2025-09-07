@@ -1,15 +1,13 @@
 const { EnvGuardian } = require('../index');
 
-// Advanced usage with error handling
 console.log('Advanced Configuration Example\n');
 
 const guardian = new EnvGuardian({ 
-  strict: false,  // Don't throw on validation errors
+  strict: false,  
   loadDotenv: true 
 });
 
 const schema = {
-  // Database configuration
   DATABASE_URL: { 
     type: 'url', 
     required: true,
@@ -29,16 +27,13 @@ const schema = {
     default: 'redis://localhost:6379'
   },
   
-  // Email settings
   SMTP_HOST: { type: 'string', default: 'localhost' },
   SMTP_PORT: { type: 'number', default: 587 },
   FROM_EMAIL: { type: 'email', required: true },
   
-  // Application settings
   APP_NAME: { type: 'string', required: true },
   APP_VERSION: {
     type: (value, key) => {
-      // Custom semantic version validator
       if (!/^\d+\.\d+\.\d+$/.test(value)) {
         throw new Error(`${key} must be a valid semantic version (e.g., 1.0.0)`);
       }
@@ -47,7 +42,6 @@ const schema = {
     default: '1.0.0'
   },
   
-  // Feature flags
   FEATURES: {
     type: (value, key) => {
       try {
@@ -63,11 +57,9 @@ const schema = {
     default: '{"newUI": false, "betaFeatures": false}'
   },
   
-  // Rate limiting
-  RATE_LIMIT_WINDOW: { type: 'number', default: 900000 }, // 15 minutes
+  RATE_LIMIT_WINDOW: { type: 'number', default: 900000 }, 
   RATE_LIMIT_MAX: { type: 'number', default: 100 },
   
-  // Logging
   LOG_LEVEL: { 
     type: 'enum', 
     values: ['error', 'warn', 'info', 'debug'], 

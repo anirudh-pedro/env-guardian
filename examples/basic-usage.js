@@ -1,27 +1,21 @@
 const envGuardian = require('../index');
 
-// Basic usage example
 console.log('Basic Configuration Example\n');
 
 const config = envGuardian({
-  // Server settings
   PORT: { type: 'number', default: 3000 },
   HOST: { type: 'string', default: 'localhost' },
   
-  // Environment
   NODE_ENV: { 
     type: 'enum', 
     values: ['development', 'staging', 'production'], 
     default: 'development' 
   },
   
-  // Security
   JWT_SECRET: { type: 'string', minLength: 16, default: 'default-secret-key' },
   
-  // Features
   ENABLE_CORS: { type: 'boolean', default: false },
   
-  // External services
   API_KEYS: { type: 'array', separator: ',', default: 'key1,key2,key3' },
 });
 

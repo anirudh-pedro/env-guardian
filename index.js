@@ -22,7 +22,6 @@ class EnvGuardian {
     }
   }
 
-  // Type validation functions
   validateString(value, key, config = {}) {
     if (typeof value !== 'string') {
       throw new EnvGuardianError(`Invalid type for ${key}. Expected string, got ${typeof value}`, key);
@@ -155,7 +154,6 @@ class EnvGuardian {
         
         let value = process.env[key];
 
-        // Handle missing values
         if (value === undefined || value === '') {
           if (required) {
             errors.push(new EnvGuardianError(`Missing required environment variable: ${key}`, key));
@@ -168,7 +166,6 @@ class EnvGuardian {
           }
         }
 
-        // Parse and validate the value
         result[key] = this.parseValue(value, type, key, config);
         
       } catch (error) {
@@ -192,7 +189,6 @@ class EnvGuardian {
   }
 }
 
-// Convenience function for backward compatibility and simple usage
 function envGuardian(schema, options = {}) {
   const guardian = new EnvGuardian(options);
   const result = guardian.validate(schema);
@@ -204,7 +200,6 @@ function envGuardian(schema, options = {}) {
   return result.values;
 }
 
-// Export both the class and the function
 envGuardian.EnvGuardian = EnvGuardian;
 envGuardian.EnvGuardianError = EnvGuardianError;
 
