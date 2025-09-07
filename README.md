@@ -1,8 +1,8 @@
-# 🛡️ env-guardian
+# 🛡️ env-guardian-js
 
 A lightweight Node.js package to validate and manage environment variables with type safety.
 
-[![npm version](https://badge.fury.io/js/env-guardian.svg)](https://badge.fury.io/js/env-guardian)
+[![npm version](https://badge.fury.io/js/env-guardian-js.svg)](https://badge.fury.io/js/env-guardian-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ Features
@@ -19,13 +19,13 @@ A lightweight Node.js package to validate and manage environment variables with 
 ## 📦 Installation
 
 ```bash
-npm install env-guardian
+npm install env-guardian-js
 ```
 
 ## 🚀 Quick Start
 
 ```javascript
-const envGuardian = require("env-guardian");
+const envGuardian = require("env-guardian-js");
 
 // Define your environment schema
 const config = envGuardian({
@@ -49,7 +49,7 @@ console.log("Configuration loaded:", config);
 ### Basic Usage
 
 ```javascript
-const envGuardian = require("env-guardian");
+const envGuardian = require("env-guardian-js");
 
 // Simple validation
 const config = envGuardian({
@@ -170,7 +170,7 @@ const config = envGuardian({
 #### Using the EnvGuardian Class
 
 ```javascript
-const { EnvGuardian } = require("env-guardian");
+const { EnvGuardian } = require("env-guardian-js");
 
 const guardian = new EnvGuardian({
   loadDotenv: true, // Load .env file (default: true)
@@ -191,7 +191,7 @@ console.log(result.errors); // [EnvGuardianError: ...]
 #### Error Handling
 
 ```javascript
-const { EnvGuardianError } = require("env-guardian");
+const { EnvGuardianError } = require("env-guardian-js");
 
 try {
   const config = envGuardian({
@@ -235,7 +235,7 @@ try {
 ### Complete Application Configuration
 
 ```javascript
-const envGuardian = require("env-guardian");
+const envGuardian = require("env-guardian-js");
 
 const config = envGuardian({
   // Server configuration
@@ -363,7 +363,7 @@ The package includes comprehensive tests covering all validation types and edge 
 env-guardian includes full TypeScript definitions:
 
 ```typescript
-import envGuardian, { EnvGuardian, ValidationConfig } from "env-guardian";
+import envGuardian, { EnvGuardian, ValidationConfig } from "env-guardian-js";
 
 interface AppConfig {
   PORT: number;

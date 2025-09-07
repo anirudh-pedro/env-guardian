@@ -18,11 +18,14 @@
     "typescript",
     "type-safety",
     "configuration",
-    "environment-variables"
+    "environment-variables",
+    "env-vars",
+    "config-validation"
   ],
   "author": {
     "name": "Anirudh",
-    "email": "anirudh200503@gmail.com"
+    "email": "anirudh200503@gmail.com",
+    "url": "https://github.com/anirudh-pedro"
   },
   "license": "MIT",
   "repository": {
@@ -47,5 +50,8 @@
   "dependencies": {
     "dotenv": "^16.4.5"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
 }
