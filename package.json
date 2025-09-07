@@ -1,5 +1,5 @@
 {
-  "name": "env-guardian",
+  "name": "env-guardian-js",
   "version": "1.0.0",
   "description": "A lightweight Node.js package to validate and manage environment variables with type safety",
   "main": "index.js",
@@ -27,12 +27,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/env-guardian.git"
+    "url": "https://github.com/anirudh-pedro/env-guardian.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/env-guardian/issues"
+    "url": "https://github.com/anirudh-pedro/env-guardian/issues"
   },
-  "homepage": "https://github.com/yourusername/env-guardian#readme",
+  "homepage": "https://github.com/anirudh-pedro/env-guardian#readme",
   "files": [
     "index.js",
     "index.d.ts",
