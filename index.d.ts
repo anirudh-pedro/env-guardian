@@ -47,8 +47,8 @@ export class EnvGuardian {
 declare function envGuardian<T = any>(schema: EnvSchema, options?: EnvGuardianOptions): T;
 
 declare namespace envGuardian {
-  export const EnvGuardian: typeof import('./index').EnvGuardian;
-  export const EnvGuardianError: typeof import('./index').EnvGuardianError;
+  export const Guardian: typeof EnvGuardian;
+  export const GuardianError: typeof EnvGuardianError;
 }
 
-export = envGuardian;
+export default envGuardian;
